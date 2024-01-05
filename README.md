@@ -1,4 +1,4 @@
-# learn_docker
+# Learn_Docker
 Follow the steps to create your own docker image and run app platform independent.
 
 #### create Dockerfile
@@ -18,7 +18,7 @@ RUN apt-get update && \
 #    wget \
 #    git \
 #    && rm -rf /var/lib/apt/lists/* \
-   snakemake
+    snakemake
 
 # Copy all files to the container
 COPY . .
