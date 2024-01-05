@@ -1,7 +1,8 @@
 # learn_docker
 Follow the steps to create your own docker image and run app platform independent.
-```
+
 ####create Dockerfile
+```
 # Use an official base image#os
 FROM ubuntu:23.04
 
