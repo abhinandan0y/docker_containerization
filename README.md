@@ -31,6 +31,36 @@ EXPOSE 80
 CMD ["./snp.sh"]
 #CMD ["./your_start_script.sh"]
 ```
+#### content inside shell file
+```
+snp.sh
+#!/bin/bash
+echo "Strated Docker"
+echo "SNP Pipeline Running"
+snakemake -j -s ./snakemake_snp_steps_pipelineFinal.smk
+```
+#### build the docker with all details in script
+```docker build -t snp_snakemake . ```
+
+#### to directly run the container
+```
+docker run -it --name my-container snp_snakemake 
+```
+#to get inside shell
+```
+docker run -it --name my-container snp_snakemake /bin/bash
+#### for installing and making any changes required but it will only be inside docker.
+```
+#### stop or remove container
+```
+docker stop my-container
+docker rm my-container
+```
+#### check logs; run from outside docker
+```docker logs nanopore_backend```
+
+
+
 **#Knowlegde is FREE but Solution is Your's🤘🏻**
 
 **Keep on Learning and Executing...🏃🏻** contact@:bioinformaticsfuture@gmail.com
