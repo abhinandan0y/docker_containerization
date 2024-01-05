@@ -27,27 +27,27 @@ COPY . .
 # EXPOSE 3000
 
 # Define the command to run your app
-CMD ["./snp.sh"]
+CMD ["./test.sh"]
 #CMD ["./your_start_script.sh"]
 ```
 #### content inside shell file
 ```
-snp.sh
+test.sh
 #!/bin/bash
 echo "Strated Docker"
-echo "SNP Pipeline Running"
-snakemake -j -s ./snakemake_snp_steps_pipelineFinal.smk
+echo "Test Pipeline Running"
+snakemake -j -s ./snakemake_test_steps_pipeline.smk
 ```
 #### build the docker with all details in script
-```docker build -t snp_snakemake . ```
+```docker build -t test_snakemake . ```
 
 #### to directly run the container
 ```
-docker run -it --name my-container snp_snakemake 
+docker run -it --name my-container test_snakemake 
 ```
 #to get inside shell
 ```
-docker run -it --name my-container snp_snakemake /bin/bash
+docker run -it --name my-container test_snakemake /bin/bash
 #### for installing and making any changes required but it will only be inside docker.
 ```
 #### stop or remove container
