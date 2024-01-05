@@ -25,7 +25,6 @@ COPY . .
 
 # Expose the port your app runs on (if applicable)
 # EXPOSE 3000
-EXPOSE 80
 
 # Define the command to run your app
 CMD ["./snp.sh"]
