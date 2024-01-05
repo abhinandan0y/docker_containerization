@@ -32,7 +32,7 @@ CMD ["./test.sh"]
 ```
 #### content inside shell file
 ```
-test.sh
+##test.sh
 #!/bin/bash
 echo "Strated Docker"
 echo "Test Pipeline Running"
