@@ -45,10 +45,10 @@ snakemake -j -s ./snakemake_test_steps_pipeline.smk
 ```
 docker run -it --name my-container test_snakemake 
 ```
-#to get inside shell
+#### to get inside shell
 ```
 docker run -it --name my-container test_snakemake /bin/bash
-#### for installing and making any changes required but it will only be inside docker.
+# for installing and making any changes required but it will only be inside docker.
 ```
 #### stop or remove container
 ```
