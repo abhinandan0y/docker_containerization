@@ -56,7 +56,7 @@ docker stop my-container
 docker rm my-container
 ```
 #### check logs; run from outside docker
-```docker logs nanopore_backend```
+```docker logs snpsnakemake```
 ### How to get your docker from system and run on another system?
 ```
 docker export -o testsnakemake.tar my-container
