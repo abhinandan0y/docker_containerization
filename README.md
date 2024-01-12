@@ -67,9 +67,9 @@ docker import testsnakemake.tar new_image
 sha256:d5b8fa51895d4a0e16fa2e4a196e2b7bf2950d1a33d4fc7786c1d1bea93c7a80
 
 Run the Container:
-docker run -it --name my_container my_image /bin/bash
-If your container runs a service in the background (daemonized), you might want to use the -d option instead of -it:
-#docker run -d --name new_container_name new_image
+docker run -it --name new_container_name_test new_image_test /bin/bash
+#If your container runs a service in the background (daemonized), you might want to use the -d option instead of -it:
+#docker run -d --name new_container_name new_image /bin/bash
 c65d8d2f92f27dcbd0d6faabd7bcf96814f4f2acc026c571a4de7ae12f54be5a
 
 docker ps -a
