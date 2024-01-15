@@ -57,7 +57,7 @@ docker rm my-container
 ```
 #### check logs; run from outside docker
 ```docker logs snpsnakemake```
-### How to get your docker from system and run on another system?
+### How to get your docker image from one system and run on another system?
 ```
 docker export -o testsnakemake.tar my-container
 #output = snpsnakemake.tar
@@ -75,7 +75,23 @@ CONTAINER ID   IMAGE            COMMAND        CREATED         STATUS           
 c65d8d2f92f2   new_image_test   "/bin/bash"    5 minutes ago   Exited (0) 2 minutes ago  new_container_name_test
 
 ```
+#### Get all the files in the docker container
+```
+The cp command can be used to copy files.
 
+One specific file can be copied TO the container like:
+
+docker cp foo.txt container_id:/foo.txt
+One specific file can be copied FROM the container like:
+
+docker cp container_id:/foo.txt foo.txt
+For emphasis, container_id is a container ID, not an image ID. (Use docker ps to view listing which includes container_ids.)
+
+Multiple files contained by the folder src can be copied into the target folder using:
+
+docker cp src/. container_id:/target
+docker cp container_id:/src/. target
+```
 
 **#Knowlegde is FREE but Solution is Your's🤘🏻**
 
