@@ -64,7 +64,7 @@ docker export -o testsnakemake.tar my-container
 
 Import the Docker Container:
 docker import testsnakemake.tar new_image
-sha256:d5b8fa51895d4a0e16fa2e4a196e2b7bf2950d1a33d4fc7786c1d1bea93c7a80
+output: sha256:d5b8fa51895d4a0e16fa2e4a196e2b7bf2950d1a33d4fc7786c1d1bea93c7a80
 
 Run the Container:
 docker run -it --name new_container_name_test new_image_test /bin/bash
