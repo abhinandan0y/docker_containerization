@@ -67,7 +67,7 @@ docker import testsnakemake.tar new_image
 output: sha256:d5b8fa51895d4a0e16fa2e4a196e2b7bf2950d1a33d4fc7786c1d1bea93c7a80
 
 Run the Container:
-docker run -it --name new_container_name_test new_image_test /bin/bash
+docker run -it --name new_container_name_test new_image /bin/bash
 #If your container runs a service in the background (daemonized), you might want to use the -d option instead of -it:
 
 docker ps -a
@@ -88,8 +88,9 @@ docker cp container_id:/foo.txt foo.txt
 For emphasis, container_id is a container ID, not an image ID. (Use docker ps to view listing which includes container_ids.)
 
 Multiple files contained by the folder src can be copied into the target folder using:
-
+#from source to target in docker
 docker cp src/. container_id:/target
+#from docker to host target
 docker cp container_id:/src/. target
 ```
 
