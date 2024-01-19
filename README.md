@@ -53,6 +53,13 @@ ERRORS:
 docker exec -it my-container /bin/bash
 Error response from daemon: Container cb5e45684296aaf31fd0064972fa63b42abd081cdb1a2803fcd15961a5894421 is not running
 Sol:
+sudo systemctl restart docker.socket docker.service
+docker rm -f <container id>
+#your last resort for critical systems, because restarting docker socket and services while you have running containers have some potential complications. Some of them are as follows:
+
+Loss of Logs: You might loose some logs during startup.
+Orphaned Processes: In some rare cases, restarting Docker might leave behind orphaned container processes. These can consume resources and might need to be manually killed.
+Potential for Data Loss: In very rare cases, there might be potential for data loss, especially if containers were in the middle of write operations when Docker was restarted.
 ```
 #### stop or remove container
 ```
