@@ -49,6 +49,10 @@ docker run -it --name my-container test_snakemake
 ```
 docker run -it --name my-container test_snakemake /bin/bash
 # for installing and making any changes required but it will only be inside docker.
+ERRORS:
+docker exec -it my-container /bin/bash
+Error response from daemon: Container cb5e45684296aaf31fd0064972fa63b42abd081cdb1a2803fcd15961a5894421 is not running
+Sol:
 ```
 #### stop or remove container
 ```
