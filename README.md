@@ -104,7 +104,11 @@ docker cp src/. container_id:/target
 #from docker to host target
 docker cp container_id:/src/. target
 ```
+###Map ports: -p allows you to map ports between the container and the host:
 
+```bash
+docker run -p 8080:80 nginx:latest
+```
 **#Knowlegde is FREE but Solution is Your's🤘🏻**
 
 **Keep on Learning and Executing...🏃🏻** contact@:bioinformaticsfuture@gmail.com
