@@ -1,5 +1,13 @@
 # Learn_Docker
 Follow the steps to create your own docker image and run app platform independent.
+#### Installation steps
+```
+#Add the GPG key for the official Docker repository to your system:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#Add the Docker repository to APT sources:
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo systemctl status docker
+```
 
 #### create Dockerfile
 ```
