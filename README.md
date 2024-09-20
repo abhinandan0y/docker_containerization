@@ -2,6 +2,8 @@
 Follow the steps to create your own docker image and run app platform independent.
 #### Installation steps
 ```
+sudo snap install docker
+OR
 #Add the GPG key for the official Docker repository to your system:
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 #Add the Docker repository to APT sources:
