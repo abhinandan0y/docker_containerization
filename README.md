@@ -48,6 +48,7 @@ echo "Strated Docker"
 echo "Test Pipeline Running"
 snakemake -j -s ./snakemake_test_steps_pipeline.smk
 ```
+#### use sudo while running docker : sudo docker ...
 #### build the docker with all details in script
 ```docker build -t test_snakemake . ```
 
